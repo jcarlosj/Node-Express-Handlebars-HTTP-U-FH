@@ -1,6 +1,9 @@
 const express = require( 'express' ),     /** Framework para Node */
     app = express();
 
+/** Middlewares */
+app .use( express .static( __dirname + '/public' ) );
+
 /** Rutas */
 app .get( '/', ( request, response ) => {
     let data = {
@@ -11,8 +14,8 @@ app .get( '/', ( request, response ) => {
 
     response .send( data );     /** send: detecta que los datos están en formato JSON y lo formatea adecuadamente */
 });
-app .get( '/data', ( request, response ) => {
-    response .send( '<h2>Data</h2>' );
+app .get( '/contactenos', ( request, response ) => {
+    response .send( `<h2>Contactenos</h2><p>Vista servida por una ruta de Express</p>` );
 });
 
 /** Crea servidor con Node */
