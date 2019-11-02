@@ -1,0 +1,15 @@
+{
+  "name": "app-webserver",
+  "version": "1.0.0",
+  "description": "WebServer usando Node & HandleBars",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "handlebars"
+  ],
+  "author": "Juan Carlos Jiménez Gutiérrez <jcjimenez29@misena.edu.co>",
+  "license": "ISC"
+}
