@@ -1,17 +1,12 @@
-const http = require( 'http' );     /** Paquete nativo de Node */
+const express = require( 'express' ),     /** Framework para Node */
+    app = express();
+
+/** Rutas */
+app .get( '/', ( request, response ) => {
+    response .send( '<h1>WebServer usando Express</h1>' );
+});
 
 /** Crea servidor con Node */
-http .createServer( ( request, response ) => {
+app .listen( 3000 );
 
-    let data = {
-        nombre: 'Juliana',
-        edad: 29,
-        url: request .url
-    }
-
-    response .writeHead( 200, { 'Content-Type': 'application/json' });  /** Agrega a la cabecera el tipo de contenido que se va a usar */
-    response .write( JSON .stringify( data ) );                         /** Se escribe el contenido en el cuerpo de la página como una cadena de texto */
-    response .end();                                                    /** Se finaliza la respuesta del servidor */
-}) .listen( 8080 );
-
-console .log( 'Escuchando en el puerto 8080' );
+console .log( 'Escuchando en el puerto 3000' );

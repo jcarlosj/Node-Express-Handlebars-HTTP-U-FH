@@ -4,12 +4,18 @@
   "description": "WebServer usando Node & HandleBars",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app"
   },
   "keywords": [
     "node",
     "handlebars"
   ],
   "author": "Juan Carlos Jiménez Gutiérrez <jcjimenez29@misena.edu.co>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }
