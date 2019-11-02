@@ -1,0 +1,32 @@
+{{!-- Llamada a cada archivo partial (código parcial) --}}
+{{> header }}
+    {{> navbar }} 
+
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-12 col-md-6 order-2">
+                <img class="img-thumbnail border-0" src="./assets/images/contacto.png" alt="Contacto">
+            </div>
+            <div class="col-12 col-md-6">
+                <h1>Contactenos</h1>
+                <p>Este es un archivo HTML que ha sido servido por Node!</p>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Asunto</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ej: Petición">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Mensaje</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+
+{{> footer }}

@@ -4,7 +4,7 @@
   "description": "WebServer usando Node & HandleBars",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "nodemon app -e js,hbs,html,css"
   },
   "keywords": [
     "node",

@@ -1,8 +1,11 @@
-const express = require( 'express' ),     /** Framework para Node */
+const 
+    express = require( 'express' ),     /** Framework para Node */
+    hbs = require( 'hbs' ),             /** Librería de Handlebars para Express */
     app = express();
 
 /** Middlewares */
 app .use( express .static( __dirname + '/public' ) );       /** Define directorio público */
+hbs .registerPartials( __dirname + '/views/partials' );     /** Define directorio para partials */
 app .set( 'view engine', 'hbs' );                           /** Define el motor de plantillas Handlebars para Express */
 
 /** Rutas */
@@ -13,7 +16,7 @@ app .get( '/', ( request, response ) => {
     } );     /** render: el archivo con el nombrepasado y lo renderiza en la página */
 });
 app .get( '/contactenos', ( request, response ) => {
-    response .send( `<h2>Contactenos</h2><p>Vista servida por una ruta de Express</p>` );
+    response .render( 'contactenos' );
 });
 
 /** Crea servidor con Node */
