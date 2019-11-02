@@ -32,14 +32,14 @@
     </nav>
 
     <div class="jumbotron">
-        <h1 class="display-4">WebServer</h1>
+        <h1 class="display-4">{{ title }}</h1>
         <p class="lead">Este es un archivo HTML que ha sido servido por Node usando Express!.</p>
         <hr class="my-4">
         <p>Hemos implementado jQuery & Bootstrap de forma clásica, colocando dichos archivos dentro del directorio público establecido en el WebServer para que estén públicos y disponibles para su uso desde cualquier parte del proyecto.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Leer más</a>
     </div>
 
-    <footer>Todos los derechos reservados &copy; 2019</footer>
+    <footer>Todos los derechos reservados &copy; {{ anio }}</footer>
     
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
