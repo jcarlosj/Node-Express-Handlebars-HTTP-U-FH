@@ -9,18 +9,7 @@ hbs .registerPartials( __dirname + '/views/partials' );     /** Define directori
 app .set( 'view engine', 'hbs' );                           /** Define el motor de plantillas Handlebars para Express */
 
 /** Helpers */
-hbs .registerHelper( 'getCurrentYear', () => {              /** Define un Helper para HandleBars */
-    return new Date() .getFullYear();
-});
-hbs .registerHelper( 'capitalize', ( text ) => {
-    let words = text .split( ' ' );
-
-    words .forEach( ( word, idx ) => {
-        words[ idx ] = word .charAt( 0 ) .toUpperCase() + word  .slice( 1 ) .toLowerCase();     /** Colola mayúscula solo a la primera letra de la palabra */
-    });
-
-    return words .join( ' ' );
-});
+require( './hbs/helpers' );     /** Importa Helpers registrados en Handlebars */
 
 /** Rutas */
 app .get( '/', ( request, response ) => {
