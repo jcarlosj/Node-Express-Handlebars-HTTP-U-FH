@@ -3,6 +3,9 @@ const
     hbs = require( 'hbs' ),             /** Librería de Handlebars para Express */
     app = express();
 
+/** Variable de Entorno (Configuración para proveedores de Host) */
+const port = process .env .PORT || 3000;        
+
 /** Middlewares */
 app .use( express .static( __dirname + '/public' ) );       /** Define directorio público */
 hbs .registerPartials( __dirname + '/views/partials' );     /** Define directorio para partials */
@@ -23,6 +26,6 @@ app .get( '/contactenos', ( request, response ) => {
 });
 
 /** Crea servidor con Node */
-app .listen( 3000, () => {
-    console .log( 'Escuchando en el puerto 3000' );
+app .listen( port, () => {
+    console .log( `Escuchando en el puerto ${ port }` );
 });
