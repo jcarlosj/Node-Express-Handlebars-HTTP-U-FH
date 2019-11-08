@@ -16,7 +16,9 @@ app .get( '/', ( request, response ) => {
     } );     /** render: el archivo con el nombrepasado y lo renderiza en la página */
 });
 app .get( '/contactenos', ( request, response ) => {
-    response .render( 'contactenos' );
+    response .render( 'contactenos', {
+        anio: new Date() .getFullYear()
+    } );
 });
 
 /** Crea servidor con Node */
