@@ -25,7 +25,8 @@ hbs .registerHelper( 'capitalize', ( text ) => {
 /** Rutas */
 app .get( '/', ( request, response ) => {
     response .render( 'home', {
-        title: 'Web Server'
+        title: 'Web Server',
+        name: 'luisA mAríA bAzAlAr'
     } );     /** render: el archivo con el nombrepasado y lo renderiza en la página */
 });
 app .get( '/contactenos', ( request, response ) => {
